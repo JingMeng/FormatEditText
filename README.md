@@ -62,7 +62,7 @@ editText.setFormatStyle("+(**)-***-****-****");（manually enter "8613012345678"
 |fet_mark|string|Set the mark，Only set when `fet_mode` is `MODE_COMPLEX`, and the length must be 1 (default: `*`)|
 |fet_placeholder|string|Set the placeholder，Only set when `fet_mode` is `MODE_SIMPLE`, and the length must be 1 (default: ` `)|
 
-##License
+## License
 	--------
 
     	Copyright (c) 2017 dkzwm

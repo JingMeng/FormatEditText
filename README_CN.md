@@ -63,7 +63,7 @@ editText.setFormatStyle("+(**)-***-****-****");（输入8613012345678，格式�
 |fet_mark|string|指定标记符，仅当`fet_mode`为`MODE_COMPLEX`时需要设置，且长度必须为1（默认:`*`）|
 |fet_placeholder|string|指定占位符，仅当`fet_mode`为`MODE_SIMPLE`时需要设置，且长度必须为1（默认:` `）|
 
-##License
+## License
 	--------
 
     	Copyright (c) 2017 dkzwm
