@@ -1,10 +1,14 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
 
 group = 'com.github.dkzwm'
 
 android {
+    namespace 'me.dkzwm.widget.fet'
     compileSdkVersion rootProject.ext.android.compileSdkVersion
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
     buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
@@ -21,7 +25,7 @@ android {
 }
 
 dependencies {
-    compileOnly 'com.android.support:support-annotations:27.1.0'
+    compileOnly 'androidx.annotation:annotation:1.7.1'
 }
 
 
@@ -31,18 +35,18 @@ tasks.withType(JavaCompile) {
 
 task sourcesJar(type: Jar) {
     from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
+    archiveClassifier.set('sources')
 }
 
 task javadoc(type: Javadoc) {
     failOnError false
     source = android.sourceSets.main.java.sourceFiles
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    classpath += configurations.compile
+    classpath += files({ configurations.getByName('debugCompileClasspath') })
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
+    archiveClassifier.set('javadoc')
     from javadoc.destinationDir
 }
 

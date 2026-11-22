@@ -1,12 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace 'me.dkzwm.widget.fet.sample'
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
         applicationId "me.dkzwm.widget.fet.sample"
-        minSdkVersion 14
+        minSdk 14
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
@@ -16,6 +17,7 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    
     }
 }
 
@@ -23,3 +25,7 @@ dependencies {
     implementation project(':library')
     implementation 'com.android.support:appcompat-v7:27.1.0'
 }
+
+
+
+

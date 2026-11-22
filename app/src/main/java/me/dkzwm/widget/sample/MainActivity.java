@@ -1,8 +1,8 @@
-package me.dkzwm.widget.sample;
+﻿package me.dkzwm.widget.sample;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -34,58 +34,59 @@ public class MainActivity extends AppCompatActivity {
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                mTextViewLogs.append("未格式化: beforeTextChanged    s:" + s + "   " + "start:" +
+                mTextViewLogs.append("鏈牸寮忓寲: beforeTextChanged    s:" + s + "   " + "start:" +
                         start + "    count:" + count + "   after:" + after + "\n");
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mTextViewLogs.append("未格式化: onTextChanged    s:" + s + "   " + "start:" +
+                mTextViewLogs.append("鏈牸寮忓寲: onTextChanged    s:" + s + "   " + "start:" +
                         start + "    before:" + before + "   count:" + count + "\n");
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                mTextViewLogs.append("未格式化: afterTextChanged    s:" + s + "\n\n");
+                mTextViewLogs.append("鏈牸寮忓寲: afterTextChanged    s:" + s + "\n\n");
             }
         });
         EditText editTextComplex = findViewById(R.id.formattedEditText_complex);
         editTextComplex.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                mTextViewLogs.append("复杂格式化后: beforeTextChanged    s:" + s + "   " + "start:" +
+                mTextViewLogs.append("澶嶆潅鏍煎紡鍖栧悗: beforeTextChanged    s:" + s + "   " + "start:" +
                         start + "    count:" + count + "   after:" + after + "\n");
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mTextViewLogs.append("复杂格式化后: onTextChanged    s:" + s + "   " + "start:" + start +
+                mTextViewLogs.append("澶嶆潅鏍煎紡鍖栧悗: onTextChanged    s:" + s + "   " + "start:" + start +
                         "    before:" + before + "   count:" + count + "\n");
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                mTextViewLogs.append("复杂格式化后: afterTextChanged    s:" + s + "\n\n");
+                mTextViewLogs.append("澶嶆潅鏍煎紡鍖栧悗: afterTextChanged    s:" + s + "\n\n");
             }
         });
         FormattedEditText editTextSimple = findViewById(R.id.formattedEditText_simple);
         editTextSimple.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                mTextViewLogs.append("简单格式化后: beforeTextChanged    s:" + s + "   " + "start:" +
+                mTextViewLogs.append("绠€鍗曟牸寮忓寲鍚? beforeTextChanged    s:" + s + "   " + "start:" +
                         start + "    count:" + count + "   after:" + after + "\n");
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mTextViewLogs.append("简单格式化后: onTextChanged    s:" + s + "   " + "start:" + start +
+                mTextViewLogs.append("绠€鍗曟牸寮忓寲鍚? onTextChanged    s:" + s + "   " + "start:" + start +
                         "    before:" + before + "   count:" + count + "\n");
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                mTextViewLogs.append("简单格式化后: afterTextChanged    s:" + s + "\n\n");
+                mTextViewLogs.append("绠€鍗曟牸寮忓寲鍚? afterTextChanged    s:" + s + "\n\n");
             }
         });
     }
 }
+

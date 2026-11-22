@@ -2,8 +2,8 @@ package me.dkzwm.widget.fet;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.IntDef;
-import android.support.annotation.NonNull;
+import androidx.annotation.IntDef;
+import androidx.annotation.NonNull;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -352,3 +352,4 @@ public class FormattedEditText extends EditText {
     @interface Mode {
     }
 }
+
